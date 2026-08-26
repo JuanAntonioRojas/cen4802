@@ -7,10 +7,20 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    // In-memory model for leads
+    // Standard Sales Funnel stages
+    private static final List<String> PIPELINE_STAGES = Arrays.asList(
+            "New Lead",
+            "Contacted",
+            "Qualified",
+            "Proposal Sent",
+            "Negotiation",
+            "Won/Closed"
+    );
+
     static class Lead {
         int id;
         String name;
@@ -28,14 +38,13 @@ public class Main {
     private static final List<Lead> leads = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        // Seed initial data
-        leads.add(new Lead(1, "Alice Smith", "Apex Logistics", "New"));
+        leads.add(new Lead(1, "Alice Smith", "Apex Logistics", "New Lead"));
         leads.add(new Lead(2, "Bob Jones", "Beacon Tech", "Contacted"));
+        leads.add(new Lead(3, "Carla Davis", "Crestview Holdings", "Proposal Sent"));
 
-        // Start server on port 8080
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/", new CRMHandler());
-        server.setExecutor(null); // default single-threaded executor
+        server.setExecutor(null);
         System.out.println("SSCRM server started at http://localhost:8080/");
         server.start();
     }
@@ -50,17 +59,27 @@ public class Main {
             html.append("table { border-collapse: collapse; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }");
             html.append("th, td { padding: 12px 16px; border: 1px solid #ddd; text-align: left; }");
             html.append("th { background: #007bff; color: white; }");
+            html.append("select { padding: 6px 10px; border-radius: 4px; border: 1px solid #ccc; font-weight: bold; }");
             html.append("</style></head><body>");
             html.append("<h1>SSCRM &mdash; Super Simple CRM</h1>");
             html.append("<p>Current Active Pipeline Leads:</p>");
-            html.append("<table><thead><tr><th>ID</th><th>Contact Name</th><th>Company</th><th>Status</th></tr></thead><tbody>");
+            html.append("<table><thead><tr><th>ID</th><th>Contact Name</th><th>Company</th><th>Pipeline Stage (Dropdown)</th></tr></thead><tbody>");
 
             for (Lead lead : leads) {
                 html.append("<tr>")
                         .append("<td>").append(lead.id).append("</td>")
                         .append("<td>").append(lead.name).append("</td>")
                         .append("<td>").append(lead.company).append("</td>")
-                        .append("<td><strong>").append(lead.status).append("</strong></td>")
+                        .append("<td><select>");
+
+                for (String stage : PIPELINE_STAGES) {
+                    String selected = stage.equalsIgnoreCase(lead.status) ? " selected" : "";
+                    html.append("<option value=\"").append(stage).append("\"").append(selected).append(">")
+                            .append(stage)
+                            .append("</option>");
+                }
+
+                html.append("</select></td>")
                         .append("</tr>");
             }
 
