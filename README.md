@@ -1,28 +1,28 @@
-# Simple Lead Management CRM
+# SSCRM — Simple Lead Management CRM
 
 **Author:** Tony Rojas  
-**Course:** CEN 4802 - Software Integration  
+**Course:** CEN 4802C – Software Integration, Configuration, and Testing  
 **Repository:** cen4802  
 
 ---
 
 ## Project Overview
-This project is a lightweight, web-accessible Customer Relationship Management (CRM) system built in pure Java. It serves as the baseline project for practicing DevOps workflows, version control management, automated testing, and CI/CD pipelines throughout this semester.
+This project is a lightweight, web-accessible Customer Relationship Management (CRM) system built in pure Java. It serves as the baseline project for practicing DevOps workflows, version control management, branch isolation, automated testing, and CI/CD pipelines.
 
-The application allows users to view, track, manage, and directly initiate contact with sales leads via HTTP endpoints in a web browser.
+The application allows users to view, track, and manage sales leads across interactive sales funnel stages directly in a web browser.
 
 ---
 
 ## Features
-* **Built-in HTTP Server:** Runs locally on port `8080` without requiring external application servers.
-* **Lead Tracking Logic:** Manages contact records (ID, Name, Email, Phone, Status).
-* **Direct Communication Triggers:**
-  * One-click initiate call / SMS routing via Twilio API integration.
-  * Direct deep-link actions for external messaging clients (`tel:`, WhatsApp, Messenger).
-* **REST/HTTP Endpoints:**
-  * `GET /leads` - Returns the interactive lead dashboard.
-  * `POST /call` - Triggers outbound call routing.
-  * `GET /health` - Service health-check endpoint.
+* **Built-in HTTP Server:** Runs locally on port `8080` using core Java `HttpServer` without requiring heavy external application servers.
+* **Lead Tracking Logic:** Manages active pipeline records (ID, Contact Name, Company, Pipeline Stage).
+* **Interactive Sales Funnel:** Dynamic stage dropdowns allowing status transitions (*New Lead, Contacted, Qualified, Proposal Sent, Negotiation, Won/Closed*).
+* **Pure Java Architecture:** Zero external frontend or backend dependencies for minimal overhead and fast execution.
+
+### Future Roadmap
+* Direct communication triggers (Twilio API routing for calls/SMS).
+* Deep-link actions for external messaging clients (`tel:`, WhatsApp).
+* Extended REST endpoints (`/leads`, `/health`, `/call`) and persistent database back-end.
 
 ---
 
@@ -34,23 +34,7 @@ The application allows users to view, track, manage, and directly initiate conta
 
 ## How to Build and Run Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/JuanAntonioRojas/cen4802.git](https://github.com/JuanAntonioRojas/cen4802.git)
-   cd cen4802
-   ```
-
-2. **Compile the Java source files:**
-   ```bash
-   javac -d bin src/*.java
-   ```
-
-3. **Run the server:**
-   ```bash
-   java -cp bin Main
-   ```
-
-4. **Access the CRM:**
-   Open your browser and navigate to:
-   * **Leads Dashboard:** http://localhost:8080/leads
-   * **Health Check:** http://localhost:8080/health
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/JuanAntonioRojas/cen4802.git](https://github.com/JuanAntonioRojas/cen4802.git)
+cd cen4802
