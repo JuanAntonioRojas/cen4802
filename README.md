@@ -1,4 +1,4 @@
-# SSCRM — Simple Lead Management CRM
+# SSCRM — Super Simple CRM (Customer Relationship Management)
 
 **Author:** Tony Rojas  
 **Course:** CEN 4802C – Software Integration, Configuration, and Testing  
