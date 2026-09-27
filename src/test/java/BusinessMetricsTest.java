@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BusinessMetricsTest {
 
+
     @Test
     void metricsSummarizeCustomerAndRevenueIntelligence() {
         CRMService service = new CRMService(List.of(
@@ -25,6 +26,10 @@ class BusinessMetricsTest {
         assertEquals(1, metrics.getWonCount());
         assertEquals(1, metrics.getLostCount());
     }
+
+
+
+
 
     @Test
     void zeroActiveDealsProduceZeroAverage() {

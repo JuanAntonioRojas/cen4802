@@ -1,32 +1,23 @@
-# SSCRM CI Update — Customer \& Revenue Intelligence
+# SSCRM - Super Simple CRM
 
+SSCRM is a small Java CRM used for the CEN 4802C CI, testing, packaging, and containerization assignments.
 
+## Current CRM page
 
-This package replaces the unrelated array/list benchmark code with a small Java CRM domain and a new CRM-specific JUnit suite.
+The browser page includes:
 
-## 
+- Customer & Revenue Intelligence
+- Active Opportunities
+- Pipeline Value
+- Weighted Pipeline
+- Average Active Deal
+- Needs Action
+- Sales Funnel
+- Estimated value, probability, weighted value, and next follow-up date
 
-## Meaningful Assignment 4 revision
+"Needs Action" is the short owner-facing list of customers or opportunities that require a sales action now.  The score is based on follow-up urgency, opportunity value, and funnel stage.
 
-
-
-The Java application now includes:
-
-* Customer \& Revenue Intelligence cards
-* Total active pipeline value
-* Weighted pipeline value
-* Average active deal value
-* A Today / Next Best Action priority list
-* Priority rules intentionally aligned with the n8n prototype
-* A responsive dark-mode CRM page suitable for browser demonstration
-
-`Financial Health \& Cash Flow` is deliberately shown as the next planned revision so it can become the visible source change used during the Assignment 5 container rebuild.
-
-## 
-
-## Files
-
-
+## Project files
 
 ```text
 src/main/java/
@@ -42,18 +33,14 @@ src/test/java/
   MainTest.java
 ```
 
-## 
-
 ## Local verification
-
-
 
 From the project root:
 
 ```bat
 mvn clean test
 mvn package
-java -jar target\\sscrm-1.1.0.jar
+java -jar target\sscrm-1.1.0.jar
 ```
 
 Then open:
@@ -62,20 +49,15 @@ Then open:
 http://localhost:8080
 ```
 
-If Jenkins is already using port 8080, start Jenkins on another port such as 8081 before running SSCRM.
+Jenkins uses port 8081 so SSCRM can use port 8080.
 
-## 
+## Docker
 
-## Suggested Git workflow
-
-
+The Dockerfile does not rebuild the Java source.  It copies the JAR that Maven/Jenkins already built and tested.
 
 ```bat
-git checkout -b feature/customer-revenue-intelligence
-git add .
-git commit -m "Add CRM customer and revenue intelligence"
-git push -u origin feature/customer-revenue-intelligence
+docker build -t sscrm:1.1.0 .
+docker run --name sscrm-container -p 8080:8080 sscrm:1.1.0
 ```
 
-Create a Pull Request into `main`, merge it, and then execute the Jenkins pipeline again. The new CI build should show this new Git commit, the new CRM-specific unit tests, a successful package stage, and a new `sscrm-1.1.0.jar` artifact.
-
+The application is then available at `http://localhost:8080` from inside the container.
