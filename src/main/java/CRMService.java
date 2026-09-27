@@ -1,121 +1,226 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-/**
- * Business rules for the small SSCRM demonstration.
- *
- * The priority rules intentionally mirror the n8n Next Best Action prototype
- * so the Java application and the visual automation experiment can be compared.
- */
+//  The simple business rules for SSCRM are kept in this class.
 public class CRMService {
     private final List<Lead> leads;
 
+
+
+
+
     public CRMService(List<Lead> leads) {
+        //  Keep our own copy so another class cannot change this list by accident.
         this.leads = new ArrayList<>(leads);
     }
 
+
+
+
+
     public List<Lead> getLeads() {
-        return List.copyOf(leads);
+        return new ArrayList<>(leads);
     }
+
+
+
+
 
     public List<Lead> getActiveLeads() {
-        return leads.stream()
-                .filter(lead -> !lead.isClosed())
-                .toList();
+        List<Lead> active = new ArrayList<>();
+
+        //  In here is where we go through each lead.
+        for (Lead lead : leads) if (!lead.isClosed()) active.add(lead);
+
+        return active;
     }
+
+
+
+
 
     public double totalPipelineValue() {
-        return getActiveLeads().stream()
-                .mapToDouble(Lead::getEstimatedValue)
-                .sum();
+        double total = 0;
+
+        //  Only open opportunities belong in the current pipeline.
+        for (Lead lead : getActiveLeads()) total += lead.getEstimatedValue();
+
+        return total;
     }
+
+
+
+
 
     public double totalWeightedPipelineValue() {
-        return getActiveLeads().stream()
-                .mapToDouble(Lead::getWeightedValue)
-                .sum();
+        double total = 0;
+
+        //  Weighted value gives more weight to deals that are more likely to close.
+        for (Lead lead : getActiveLeads()) total += lead.getWeightedValue();
+
+        return total;
     }
+
+
+
+
 
     public double averageActiveDealValue() {
-        return getActiveLeads().stream()
-                .mapToDouble(Lead::getEstimatedValue)
-                .average()
-                .orElse(0.0);
+        List<Lead> active = getActiveLeads();
+
+        if (active.isEmpty()) return 0;
+
+        return totalPipelineValue() / active.size();
     }
+
+
+
+
 
     public long countByStatus(String status) {
-        return leads.stream()
-                .filter(lead -> lead.getStatus().equalsIgnoreCase(status))
-                .count();
+        long count = 0;
+
+        for (Lead lead : leads) if (lead.getStatus().equalsIgnoreCase(status)) count++;
+
+        return count;
     }
 
-    public int priorityScore(Lead lead, LocalDate today) {
-        if (lead.isClosed()) {
-            return Integer.MIN_VALUE;
-        }
+
+
+
+
+    public int actionScore(Lead lead, LocalDate today) {
+        //  Closed leads do not need another sales action.
+        if (lead.isClosed()) return -1;
 
         int score = 0;
         LocalDate followUp = lead.getNextFollowUp();
 
-        if (followUp != null && followUp.isBefore(today)) {
-            score += 40;
-        } else if (followUp != null && followUp.isEqual(today)) {
-            score += 25;
-        }
+        //  Overdue and today's follow-ups get the most attention first.
+        if (followUp != null && followUp.isBefore(today)) score += 40;
+        else if (followUp != null && followUp.isEqual(today)) score += 25;
 
-        if (lead.getEstimatedValue() >= 5_000) {
-            score += 25;
-        } else if (lead.getEstimatedValue() >= 1_000) {
-            score += 15;
-        }
+        //  Larger opportunities get a little more weight.
+        if (lead.getEstimatedValue() >= 5_000) score += 25;
+        else if (lead.getEstimatedValue() >= 1_000) score += 15;
 
-        if (lead.getStatus().equalsIgnoreCase("Negotiation")) {
-            score += 20;
-        } else if (lead.getStatus().equalsIgnoreCase("Proposal Sent")) {
-            score += 15;
-        } else if (lead.getStatus().equalsIgnoreCase("Qualified")) {
-            score += 10;
-        }
+        //  Leads farther down the funnel are usually closer to a sale.
+        if (lead.getStatus().equalsIgnoreCase("Negotiation")) score += 20;
+        else if (lead.getStatus().equalsIgnoreCase("Proposal Sent")) score += 15;
+        else if (lead.getStatus().equalsIgnoreCase("Qualified")) score += 10;
 
         return score;
     }
 
-    public String suggestedNextAction(Lead lead, LocalDate today) {
+
+
+
+
+    public String actionNeeded(Lead lead, LocalDate today) {
         LocalDate followUp = lead.getNextFollowUp();
 
-        if (followUp != null && followUp.isBefore(today)) {
-            return "Contact Now";
-        }
-        if (lead.getStatus().equalsIgnoreCase("Negotiation")) {
-            return "Review and Contact";
-        }
-        if (lead.getStatus().equalsIgnoreCase("Proposal Sent")) {
-            return "Follow Up on Proposal";
-        }
-        if (lead.getStatus().equalsIgnoreCase("Qualified")) {
-            return "Advance Opportunity";
-        }
+        if (followUp != null && followUp.isBefore(today)) return "Contact Now";
+        if (lead.getStatus().equalsIgnoreCase("Negotiation")) return "Review and Contact";
+        if (lead.getStatus().equalsIgnoreCase("Proposal Sent")) return "Follow Up on Proposal";
+        if (lead.getStatus().equalsIgnoreCase("Qualified")) return "Advance Opportunity";
+
         return "Review Customer";
     }
 
-    public List<PriorityItem> todayPriorities(LocalDate today, int limit) {
-        return getActiveLeads().stream()
-                .map(lead -> new PriorityItem(
-                        lead,
-                        priorityScore(lead, today),
-                        suggestedNextAction(lead, today)))
-                .sorted(Comparator
-                        .comparingInt(PriorityItem::score).reversed()
-                        .thenComparing(
-                                Comparator.comparingDouble(
-                                        (PriorityItem item) -> item.lead().getWeightedValue())
-                                        .reversed()))
-                .limit(limit)
-                .toList();
+
+
+
+
+    public List<ActionItem> needsAction(LocalDate today, int limit) {
+        List<ActionItem> items = new ArrayList<>();
+
+        //  Turn each active lead into a small item for the Needs Action list.
+        for (Lead lead : getActiveLeads()) {
+            int score = actionScore(lead, today);
+            String action = actionNeeded(lead, today);
+            items.add(new ActionItem(lead, score, action));
+        }
+
+        sortActionItems(items);
+
+        //  Return only the number of items requested by the page.
+        List<ActionItem> result = new ArrayList<>();
+        for (int i = 0; i < items.size() && i < limit; i++) result.add(items.get(i));
+
+        return result;
     }
 
-    public record PriorityItem(Lead lead, int score, String suggestedAction) {
+
+
+
+
+    private void sortActionItems(List<ActionItem> items) {
+        //  There are only a few demo leads, so a simple sort is easier to read here.
+        for (int i = 0; i < items.size() - 1; i++) {
+            for (int j = i + 1; j < items.size(); j++) {
+                if (shouldComeFirst(items.get(j), items.get(i))) {
+                    ActionItem temp = items.get(i);
+                    items.set(i, items.get(j));
+                    items.set(j, temp);
+                }
+            }
+        }
+    }
+
+
+
+
+
+    private boolean shouldComeFirst(ActionItem first, ActionItem second) {
+        if (first.getScore() > second.getScore()) return true;
+        if (first.getScore() < second.getScore()) return false;
+
+        return first.getLead().getWeightedValue() > second.getLead().getWeightedValue();
+    }
+
+
+
+
+
+    //  A small regular class is enough for one row in the Needs Action list.
+    public static class ActionItem {
+        private final Lead lead;
+        private final int score;
+        private final String action;
+
+
+
+
+
+        public ActionItem(Lead lead, int score, String action) {
+            this.lead = lead;
+            this.score = score;
+            this.action = action;
+        }
+
+
+
+
+
+        public Lead getLead() {
+            return lead;
+        }
+
+
+
+
+
+        public int getScore() {
+            return score;
+        }
+
+
+
+
+
+        public String getAction() {
+            return action;
+        }
     }
 }

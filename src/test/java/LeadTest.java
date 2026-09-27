@@ -2,15 +2,27 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LeadTest {
 
+
+
+
+
     @Test
     void weightedValueUsesEstimatedValueTimesProbability() {
+        //  $10,000 at 45% should give a weighted value of $4,500.
         Lead lead = new Lead(1, "A", "Co", "Qualified", 10_000, 0.45, LocalDate.now());
+
         assertEquals(4_500.0, lead.getWeightedValue(), 0.001);
     }
+
+
+
+
 
     @Test
     void wonAndLostAreClosed() {
@@ -21,8 +33,13 @@ class LeadTest {
         assertTrue(lost.isClosed());
     }
 
+
+
+
+
     @Test
     void probabilityOutsideZeroToOneIsRejected() {
+        //  120% is not a valid probability.
         assertThrows(IllegalArgumentException.class,
                 () -> new Lead(1, "A", "Co", "Qualified", 1_000, 1.20, LocalDate.now()));
     }
