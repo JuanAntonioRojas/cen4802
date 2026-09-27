@@ -1,40 +1,81 @@
-# SSCRM — Super Simple CRM (Customer Relationship Management)
+# SSCRM CI Update — Customer \& Revenue Intelligence
 
-**Author:** Tony Rojas  
-**Course:** CEN 4802C – Software Integration, Configuration, and Testing  
-**Repository:** cen4802  
 
----
 
-## Project Overview
-This project is a lightweight, web-accessible Customer Relationship Management (CRM) system built in pure Java. It serves as the baseline project for practicing DevOps workflows, version control management, branch isolation, automated testing, and CI/CD pipelines.
+This package replaces the unrelated array/list benchmark code with a small Java CRM domain and a new CRM-specific JUnit suite.
 
-The application allows users to view, track, and manage sales leads across interactive sales funnel stages directly in a web browser.
+## 
 
----
+## Meaningful Assignment 4 revision
 
-## Features
-* **Built-in HTTP Server:** Runs locally on port `8080` using core Java `HttpServer` without requiring heavy external application servers.
-* **Lead Tracking Logic:** Manages active pipeline records (ID, Contact Name, Company, Pipeline Stage).
-* **Interactive Sales Funnel:** Dynamic stage dropdowns allowing status transitions (*New Lead, Contacted, Qualified, Proposal Sent, Negotiation, Won/Closed*).
-* **Pure Java Architecture:** Zero external frontend or backend dependencies for minimal overhead and fast execution.
 
-### Future Roadmap
-* Direct communication triggers (Twilio API routing for calls/SMS).
-* Deep-link actions for external messaging clients (`tel:`, WhatsApp).
-* Extended REST endpoints (`/leads`, `/health`, `/call`) and persistent database back-end.
 
----
+The Java application now includes:
 
-## Requirements
-* **Java Development Kit (JDK):** Version 17 or higher
-* **Git:** For version control management
+* Customer \& Revenue Intelligence cards
+* Total active pipeline value
+* Weighted pipeline value
+* Average active deal value
+* A Today / Next Best Action priority list
+* Priority rules intentionally aligned with the n8n prototype
+* A responsive dark-mode CRM page suitable for browser demonstration
 
----
+`Financial Health \& Cash Flow` is deliberately shown as the next planned revision so it can become the visible source change used during the Assignment 5 container rebuild.
 
-## How to Build and Run Locally
+## 
 
-**1. Clone the repository:**
-```bash
-git clone [https://github.com/JuanAntonioRojas/cen4802.git](https://github.com/JuanAntonioRojas/cen4802.git)
-cd cen4802
+## Files
+
+
+
+```text
+src/main/java/
+  Main.java
+  Lead.java
+  CRMService.java
+  BusinessMetrics.java
+
+src/test/java/
+  LeadTest.java
+  CRMServiceTest.java
+  BusinessMetricsTest.java
+  MainTest.java
+```
+
+## 
+
+## Local verification
+
+
+
+From the project root:
+
+```bat
+mvn clean test
+mvn package
+java -jar target\\sscrm-1.1.0.jar
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+If Jenkins is already using port 8080, start Jenkins on another port such as 8081 before running SSCRM.
+
+## 
+
+## Suggested Git workflow
+
+
+
+```bat
+git checkout -b feature/customer-revenue-intelligence
+git add .
+git commit -m "Add CRM customer and revenue intelligence"
+git push -u origin feature/customer-revenue-intelligence
+```
+
+Create a Pull Request into `main`, merge it, and then execute the Jenkins pipeline again. The new CI build should show this new Git commit, the new CRM-specific unit tests, a successful package stage, and a new `sscrm-1.1.0.jar` artifact.
+
