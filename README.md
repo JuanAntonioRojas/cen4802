@@ -60,7 +60,6 @@ Each opportunity displays:
 <!-- Replace the link below with your actual screenshot -->
 ![SSCRM Screenshot](images/Dashboard.jpg)
 
-*Replace the placeholder above with a real screenshot of the running application.*
 
 </div>
 
