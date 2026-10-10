@@ -19,8 +19,6 @@
 
 <br>
 
-> **CREATE DIFFERENTLY → SELL DIFFERENTLY**
-
 </div>
 
 <br>
@@ -31,7 +29,7 @@
 | :---: |
 | <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="90%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 
-
+> **CREATE DIFFERENTLY → SELL DIFFERENTLY**
 </div>
 
 
