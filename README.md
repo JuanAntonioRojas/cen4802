@@ -31,8 +31,7 @@
 
 <div align="center">
 
-|  from TonyRojas.net → Manage → CRM  |
-| *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY* |
+| from TonyRojas.net → Manage → CRM <br> *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY* |
 | :---: |
 | <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="90%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 
