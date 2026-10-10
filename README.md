@@ -1,7 +1,7 @@
 <div align="center">
 
 # SSCRM
-### ** ✨ My Super Simple CRM — SELL DIFFERENT**
+### ✨ Super Simple CRM
 
 <br>
 
