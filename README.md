@@ -5,32 +5,28 @@
 
 **Pipeline intelligence that closes. From lead to close is just one step.**
 
-<br><br>
-*From TonyRojas.net → Manage → CRM.*
+<br>
+
+### ✨ My CRM Pipeline *From TonyRojas.net → Manage → CRM*
 
 `CI` • `Testing` • `Packaging` • `Containerization` • `Logic-First`
 
 <br>
-
+*External Links:*
 <!-- Core Stack - for-the-badge style like your original but expanded -->
-[Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-[Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
-[Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-[Jenkins](https://img.shields.io/badge/Jenkins-Pipeline-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-[JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+[Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) - 
+[Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) - 
+[Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white) - 
+[Jenkins](https://img.shields.io/badge/Jenkins-Pipeline-D24939?style=for-the-badge&logo=jenkins&logoColor=white) - 
+[JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5&logoColor=white) - 
 [Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 
 <br>
 
-<!-- HERO - Mocha particle sculpture like reference 1 -->
-<img src="assets/hero-mocha.png" alt="SSCRM Particle Pipeline Hero" width="100%" style="border-radius:24px">
-
-<br>
-
 > **CREATE DIFFERENTLY → SELL DIFFERENTLY**
-<br>
-> *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
+
+*INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
 
 </div>
 
@@ -38,24 +34,16 @@
 
 <div align="center">
 
-### ✨ Best CRM Pipeline
-
-| |
+| . |
 | :---: |
 | <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 
 <br>
-The mock above is generated from your reference.
+
+The mock above is a reference from TonyRojas.net → Manage → CRM.
 
 </div>
 
----
-
-<div align="center">
-
-**Go to the dashboard see live metrics → TonyRojas.net → Manage → CRM**
-
-</div>
 
 ```mermaid
 graph LR
