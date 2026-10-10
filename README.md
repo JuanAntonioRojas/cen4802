@@ -1,9 +1,7 @@
 <div align="center">
 
 # SSCRM
-### Super Simple CRM — SELL DIFFERENT
-
-** ✨ My Pipeline intelligence that closes. From lead to close is just one step.**
+### ** ✨ My Super Simple CRM — SELL DIFFERENT**
 
 <br>
 
