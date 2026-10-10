@@ -57,7 +57,7 @@ Each opportunity displays:
 
 <br>
 
-<!-- Replace the link below with your actual screenshot -->
+"This screenshot came from TonyRojas.net -> Manage -> CRM"
 ![SSCRM Screenshot](images/Dashboard.jpg)
 
 
