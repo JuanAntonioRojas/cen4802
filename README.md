@@ -58,7 +58,7 @@ Each opportunity displays:
 <br>
 
 <!-- Replace the link below with your actual screenshot -->
-![SSCRM Screenshot](https://via.placeholder.com/900x500/1a1a1a/ffffff?text=SSCRM+Dashboard+Screenshot)
+![SSCRM Screenshot](![SSCRM Screenshot](sscrm-dashboard.png))
 
 *Replace the placeholder above with a real screenshot of the running application.*
 
