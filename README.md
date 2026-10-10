@@ -1,10 +1,10 @@
 <div align="center">
 
 # SSCRM
-### Super Simple CRM — SELL DIFFERENTLY
+### Super Simple CRM — SELL DIFFERENT
 
-**Pipeline intelligence that closes. Built for speed, tested for scale.**  
-*From lead to close is just one step.*
+**Pipeline intelligence that closes. From lead to close is just one step.**  
+*From TonyRojas.net → Manage → CRM.*
 
 `CI` • `Testing` • `Packaging` • `Containerization` • `Logic-First`
 
@@ -18,13 +18,6 @@
 [JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 [Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-<br>
-
-[Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen?style=flat-square)
-[License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-[Build](https://img.shields.io/badge/Build-Passing-success?style=flat-square&logo=githubactions)
-[Code Size](https://img.shields.io/github/languages/code-size/YOUR_USERNAME/SSCRM?style=flat-square)
-[Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/SSCRM?style=flat-square)
 
 <br><br>
 
@@ -34,7 +27,7 @@
 <br>
 
 > **CREATE DIFFERENTLY → SELL DIFFERENTLY**  
-> *Edit Videos With AI → Manage Leads With AI — AND INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
+> *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
 
 </div>
 
@@ -42,22 +35,22 @@
 
 <div align="center">
 
-### Best CRM Pipeline
+### ✨ Best CRM Pipeline
 
 | |
 | :---: |
 | <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 | *↑ Replace `assets/dashboard.png` with your own screenshot - `src/main` live view* |
+<br>
+The mock above is generated from your reference.
 
 </div>
 
 ---
 
-## ✨ Unleash Your Full Pipeline
-
 <div align="center">
 
-**Go to the dashboard see live metrics →**
+**Go to the dashboard see live metrics → TonyRojas.net → Manage → CRM**
 
 </div>
 
@@ -80,7 +73,7 @@ graph LR
 
 ## 🚀 From Idea To Implementation Is Just One Step
 
-We believe every project is unique and demands an individual approach. SSCRM was built logic-first - validated before code.
+I believe that every project is unique and demands an individual approach. SSCRM was built logic-first - validated before code.
 
 **Current CRM Page includes:**
 
@@ -121,8 +114,6 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 ---
 
 ## 📸 Live Dashboard — Screenshot Placeholder
-
-> **REPLACE THIS:** Drop your real screenshot in `assets/dashboard.png`. The mock above is generated from your reference.
 
 
 
@@ -243,13 +234,10 @@ Logic diagram is checked first. If funnel has a dead state or missing probabilit
 
 <div align="center">
 
-### TRY DEMO →
-
-**Create Differently  =  Sell Differently**
 
 *Built for CEN 4802C — Designed like a real SaaS.*
 
-[Get Started] • [Check Out Today's Best Videos / Deals]
+>[Get Started] • [Check Out Today's Best Videos / Deals]
 
 <br><br>
 
