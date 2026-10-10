@@ -164,7 +164,7 @@ SSCRM/
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/SSCRM.git
+git clone https://github.com/JuanAntonioRojas/cen4802/SSCRM.git
 cd SSCRM
 
 # 2. Build & Test (DBTF: logic diagram validated before JUnit)
