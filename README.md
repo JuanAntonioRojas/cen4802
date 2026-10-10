@@ -3,7 +3,9 @@
 # SSCRM
 ### Super Simple CRM — SELL DIFFERENT
 
-**Pipeline intelligence that closes. From lead to close is just one step.**  
+**Pipeline intelligence that closes. From lead to close is just one step.**
+
+<br><br>
 *From TonyRojas.net → Manage → CRM.*
 
 `CI` • `Testing` • `Packaging` • `Containerization` • `Logic-First`
@@ -19,14 +21,15 @@
 [Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 
-<br><br>
+<br>
 
 <!-- HERO - Mocha particle sculpture like reference 1 -->
 <img src="assets/hero-mocha.png" alt="SSCRM Particle Pipeline Hero" width="100%" style="border-radius:24px">
 
 <br>
 
-> **CREATE DIFFERENTLY → SELL DIFFERENTLY**  
+> **CREATE DIFFERENTLY → SELL DIFFERENTLY**
+<br>
 > *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
 
 </div>
@@ -40,7 +43,7 @@
 | |
 | :---: |
 | <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
-| *↑ Replace `assets/dashboard.png` with your own screenshot - `src/main` live view* |
+
 <br>
 The mock above is generated from your reference.
 
@@ -237,9 +240,7 @@ Logic diagram is checked first. If funnel has a dead state or missing probabilit
 
 *Built for CEN 4802C — Designed like a real SaaS.*
 
->[Get Started] • [Check Out Today's Best Videos / Deals]
-
-<br><br>
+<br>
 
 **SSCRM © 2026 • Super Simple CRM**
 
