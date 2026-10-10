@@ -14,19 +14,16 @@
 <br>
 *External Links:*
 <!-- Core Stack - for-the-badge style like your original but expanded -->
-[Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) - 
-[Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) - 
-[Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white) - 
-[Jenkins](https://img.shields.io/badge/Jenkins-Pipeline-D24939?style=for-the-badge&logo=jenkins&logoColor=white) - 
-[JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5&logoColor=white) - 
-[Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) - 
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white) - 
+![Jenkins](https://img.shields.io/badge/Jenkins-Pipeline-D24939?style=for-the-badge&logo=jenkins&logoColor=white) - 
+![JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 
 
 <br>
 
 > **CREATE DIFFERENTLY → SELL DIFFERENTLY**
-
-*INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY*
 
 </div>
 
@@ -34,13 +31,11 @@
 
 <div align="center">
 
-| . |
+|  from TonyRojas.net → Manage → CRM  |
+| *INNOVATIVE PIPELINE LOGIC THAT PUSHES THE BOUNDARIES OF THE ORDINARY* |
 | :---: |
-| <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
+| <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="90%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 
-<br>
-
-The mock above is a reference from TonyRojas.net → Manage → CRM.
 
 </div>
 
