@@ -52,7 +52,7 @@ graph LR
 | **Needs Action** | Owner-facing list of customers requiring sales action *now* |
 
 ---
-
+<br>
 ## 🚀 From Idea To Implementation Is Just One Step
 
 I believe that every project is unique and demands an individual approach. SSCRM was built logic-first - validated before code.
@@ -70,7 +70,7 @@ I believe that every project is unique and demands an individual approach. SSCRM
 | **Sales Funnel** | Stage-based opportunity tracking | Awareness → Closed Won | See where deals die |
 
 ---
-
+<br>
 ## 🎯 Needs Action — The Intelligence Layer
 
 > **Needs Action** is the short owner-facing list of customers or opportunities that require a sales action *now*.
@@ -94,11 +94,8 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 ```
 
 ---
-
+<br>
 ## 📸 Live Dashboard — Screenshot Placeholder
-
-
-
 <details>
 <summary>Click to see what to capture</summary>
 
@@ -110,12 +107,12 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 </details>
 
 ```text
-assets/
-├── hero-mocha.png       <- Reference 1 style particle sculpture (provided)
-└── dashboard.png         <- Replace with your actual app screenshot
+├── images/
+│   └── dashboard.png               # Lavender CRM dashboard (Image 2 vibe)
 ```
 
 ---
+<br>
 
 ## 🧱 Project Structure
 
@@ -127,8 +124,7 @@ assets/
 
 ```text
 SSCRM/
-├── assets/
-│   ├── hero-mocha.png              # Mocha particle hero (Image 1 vibe)
+├── images/
 │   └── dashboard.png               # Lavender CRM dashboard (Image 2 vibe)
 │
 ├── src/main/java/
@@ -150,8 +146,8 @@ SSCRM/
 ```
 
 ---
-
-## 🛠️ Tech Stack
+<br>
+## 🛠️ My Tech Stack
 
 | Layer | Tech | Why |
 |:------|:-----|:----|
@@ -164,6 +160,7 @@ SSCRM/
 
 ---
 
+<br>
 ## ⚡ Getting Started
 
 ```bash
@@ -186,6 +183,7 @@ docker run -p 8080:8080 sscrm:latest
 
 ---
 
+<br>
 ## 🧪 CI/CD — Logic Tests Before JUnit/Cypress
 
 This repo follows Development Before The Fact:
@@ -199,7 +197,7 @@ stage('Cypress') { sh 'npx cypress run' }
 Logic diagram is checked first. If funnel has a dead state or missing probability, build fails before JUnit starts.
 
 ---
-
+<br>
 ## 📊 Badges Explained
 
 | Badge | Meaning |
@@ -215,7 +213,6 @@ Logic diagram is checked first. If funnel has a dead state or missing probabilit
 ---
 
 <div align="center">
-
 
 *Built for CEN 4802C — Designed like a real SaaS.*
 
