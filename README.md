@@ -125,6 +125,12 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 
 > **REPLACE THIS:** Drop your real screenshot in `assets/dashboard.png`. The mock above is generated from your reference.
 
+![SSCRM Screenshot](images/Dashboard.jpg)
+<br>
+"This screenshot came from TonyRojas.net -> Manage -> CRM"
+
+
+
 <details>
 <summary>Click to see what to capture</summary>
 
