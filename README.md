@@ -3,11 +3,9 @@
 # SSCRM
 ### Super Simple CRM — SELL DIFFERENT
 
-**Pipeline intelligence that closes. From lead to close is just one step.**
+** ✨ My Pipeline intelligence that closes. From lead to close is just one step.**
 
 <br>
-
-### ✨ My CRM Pipeline *From TonyRojas.net → Manage → CRM*
 
 `CI` • `Testing` • `Packaging` • `Containerization` • `Logic-First`
 
