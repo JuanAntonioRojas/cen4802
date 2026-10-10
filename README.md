@@ -1,40 +1,49 @@
+
 <div align="center">
 
 # SSCRM
 ### Super Simple CRM
 
-**A small Java CRM built for CEN 4802C**  
-CI • Testing • Packaging • Containerization
+**A clean Java CRM focused on clarity, testing, and containerization.**
 
 <br>
 
-![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![CI](https://img.shields.io/badge/CI-Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge)
 
 <br>
 
-**Current CRM Page includes:**
+*Built for CEN 4802C — Continuous Integration, Testing, Packaging & Containerization*
 
 </div>
 
-| Feature                        | Description                                      |
-|--------------------------------|--------------------------------------------------|
-| **Customer & Revenue Intelligence** | High-level business overview                  |
-| **Active Opportunities**       | Live list of open deals                          |
-| **Pipeline Value**             | Total value of the sales pipeline                |
-| **Weighted Pipeline**          | Probability-adjusted pipeline value              |
-| **Average Active Deal**        | Mean size of open opportunities                  |
-| **Needs Action**               | Owner-facing list of customers needing attention |
-| **Sales Funnel**               | Stage-based opportunity tracking                 |
+---
+
+<div align="center">
+
+### Current Capabilities
+
+</div>
+
+| | Feature | Purpose |
+|---|---------|---------|
+| 📊 | **Customer & Revenue Intelligence** | High-level business overview |
+| 🎯 | **Active Opportunities** | Live view of open deals |
+| 💰 | **Pipeline Value** | Total value of the sales pipeline |
+| ⚖️ | **Weighted Pipeline** | Probability-adjusted pipeline value |
+| 📈 | **Average Active Deal** | Mean size of open opportunities |
+| ⚡ | **Needs Action** | Owner-facing list of items requiring attention |
+| 🔄 | **Sales Funnel** | Stage-based opportunity tracking |
 
 <br>
 
-> **Needs Action** is the short owner-facing list of customers or opportunities that require a sales action *now*.  
-> The score is based on **follow-up urgency**, **opportunity value**, and **funnel stage**.
+> **Needs Action** surfaces the customers and opportunities that need attention *right now*.  
+> Scoring is based on follow-up urgency, opportunity value, and funnel stage.
 
-Each opportunity shows:
+Each opportunity displays:
 - Estimated value  
 - Probability  
 - Weighted value  
@@ -44,7 +53,22 @@ Each opportunity shows:
 
 <div align="center">
 
-## Project Structure
+### Screenshot
+
+<br>
+
+<!-- Replace the link below with your actual screenshot -->
+![SSCRM Screenshot](https://via.placeholder.com/900x500/1a1a1a/ffffff?text=SSCRM+Dashboard+Screenshot)
+
+*Replace the placeholder above with a real screenshot of the running application.*
+
+</div>
+
+---
+
+<div align="center">
+
+### Project Structure
 
 </div>
 
