@@ -42,12 +42,11 @@
 
 <div align="center">
 
-### Best Pipeline Of The Month
-**Exoplanet 1050 Pipeline • +115k qualified • 29% conversion**
+### Best CRM Pipeline
 
 | |
 | :---: |
-| <img src="assets/dashboard.png" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
+| <img src="images/Dashboard.jpg" alt="SSCRM Dashboard" width="95%" style="border-radius:16px; border:1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"> |
 | *↑ Replace `assets/dashboard.png` with your own screenshot - `src/main` live view* |
 
 </div>
@@ -124,10 +123,6 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 ## 📸 Live Dashboard — Screenshot Placeholder
 
 > **REPLACE THIS:** Drop your real screenshot in `assets/dashboard.png`. The mock above is generated from your reference.
-
-![SSCRM Screenshot](images/Dashboard.jpg)
-<br>
-"This screenshot came from TonyRojas.net -> Manage -> CRM"
 
 
 
