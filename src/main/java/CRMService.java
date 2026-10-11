@@ -90,6 +90,29 @@ public class CRMService {
 
 
 
+    //  Classify follow-up urgency for active opportunities only.
+    public String pipelineHealth(LocalDate today) {
+        int overdue = 0;
+        int dueToday = 0;
+
+        for (Lead lead : getActiveLeads()) {
+            LocalDate followUp = lead.getNextFollowUp();
+            if (followUp == null) continue;
+
+            if (followUp.isBefore(today)) overdue++;
+            else if (followUp.isEqual(today)) dueToday++;
+        }
+
+        if (overdue >= 2) return "At Risk";  // repaired to normal
+        //if (overdue >= 2) return "Healthy";  //  Intentional defect for CI demonstration. // repaired
+        if (overdue == 1 || dueToday > 0) return "Needs Attention";
+        return "Healthy";
+    }
+
+
+
+
+
     public int actionScore(Lead lead, LocalDate today) {
         //  Closed leads do not need another sales action.
         if (lead.isClosed()) return -1;

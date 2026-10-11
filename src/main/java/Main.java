@@ -67,6 +67,7 @@ public class Main {
         addPageStart(html);
         addHeader(html);
         addMetrics(html, metrics, money);
+        addPipelineHealth(html, service.pipelineHealth(today));
         addNeedsAction(html, actions, money);
         addSalesFunnel(html, service, money);
         addPageEnd(html);
@@ -124,6 +125,24 @@ public class Main {
         html.append(metricCard("Weighted Pipeline", money.format(metrics.getWeightedPipelineValue())));
         html.append(metricCard("Average Active Deal", money.format(metrics.getAverageActiveDealValue())));
         html.append("</div></section>");
+    }
+
+
+
+
+
+    private static void addPipelineHealth(StringBuilder html, String status) {
+        String color = "#54d9a0";
+        if (status.equals("Needs Attention")) color = "#ffd166";
+        if (status.equals("At Risk")) color = "#ff7b83";
+
+        html.append("<section class=\"panel\" style=\"margin-top:16px\">");
+        html.append("<h2>Pipeline Health</h2>");
+        html.append("<p style=\"font-size:1.5rem;font-weight:bold;color:" + color + "\">");
+        html.append(escape(status));
+        html.append("</p>");
+        html.append("<p class=\"muted\">Based on active opportunities and follow-up dates.</p>");
+        html.append("</section>");
     }
 
 

@@ -21,5 +21,7 @@ class MainTest {
         assertTrue(html.contains("Needs Action"));
         assertTrue(html.contains("Weighted Pipeline"));
         assertTrue(html.contains("Sales Funnel"));
+        assertTrue(html.contains("Pipeline Health"));
+        assertTrue(html.contains("At Risk"));
     }
 }
