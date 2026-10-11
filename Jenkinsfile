@@ -45,5 +45,17 @@ pipeline {
                                  fingerprint: true
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t sscrm:midterm .'
+            }
+        }
+
+        stage('HTTP Smoke Test') {
+            steps {
+                bat 'powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\\smoke-test.ps1'
+            }
+        }
     }
 }
