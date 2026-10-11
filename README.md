@@ -124,7 +124,7 @@ Example: Acme Co — $320,000 × 75% = $240,000 • Follow-up: Oct 14, 2026 • 
 ```text
 SSCRM/
 ├── images/
-│   └── dashboard.png               # Lavender CRM dashboard (Image 2 vibe)
+│   └── dashboard.png               # Lavender CRM dashboard (top)
 │
 ├── src/main/java/
 │   ├── Main.java                   # Entry + CLI dashboard renderer
@@ -141,7 +141,7 @@ SSCRM/
 ├── Dockerfile                      # Multi-stage: maven:3.9-eclipse-temurin-17 → jre
 ├── Jenkinsfile                     # DBTF: bpmnlint → mvn test → docker → cypress
 ├── pom.xml
-└── README.md                       # You are here
+└── README.md                       # We're here: on this file.
 ```
 
 ---
