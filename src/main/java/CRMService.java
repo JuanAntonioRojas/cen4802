@@ -103,8 +103,8 @@ public class CRMService {
             else if (followUp.isEqual(today)) dueToday++;
         }
 
-        //if (overdue >= 2) return "At Risk";
-        if (overdue >= 2) return "Healthy";  //  Intentional defect for CI demonstration.
+        if (overdue >= 2) return "At Risk";  // repaired to normal
+        //if (overdue >= 2) return "Healthy";  //  Intentional defect for CI demonstration. // repaired
         if (overdue == 1 || dueToday > 0) return "Needs Attention";
         return "Healthy";
     }
